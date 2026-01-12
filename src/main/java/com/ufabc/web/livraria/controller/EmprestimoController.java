@@ -20,12 +20,15 @@ import com.ufabc.web.livraria.model.entity.Emprestimo;
 @Controller
 public class EmprestimoController {
 
-	@Autowired
-	ClienteDao clienteDao;
-	@Autowired
-	ExemplarDao exemplarDao;
-	@Autowired
-	EmprestimoDao emprestimoDao;
+	private final ClienteDao clienteDao;
+	private final ExemplarDao exemplarDao;
+	private final EmprestimoDao emprestimoDao;
+
+	public EmprestimoController (ClienteDao clienteDao, ExemplarDao exemplarDao, EmprestimoDao emprestimoDao){
+		this.clienteDao = clienteDao;
+		this.exemplarDao = exemplarDao;
+		this.emprestimoDao = emprestimoDao;
+	}
 	
 	@RequestMapping(value = {"/emprestimos"})
 	@ResponseBody
