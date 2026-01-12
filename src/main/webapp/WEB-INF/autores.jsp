@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
@@ -24,28 +23,41 @@
 		
 	
 	<div class="container">
-		<table class="table table-striped ">
-			<thead>
-				<tr>
-					<th scope="col">Nome do Autor</th>
-					<th scope="col">Nacionalidade do Autor</th>
-					<th scope="col">Editar</th>
-					<th scope="col">Remover</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach items="${autores}" var="autores">
-					<tr>
-						<td>${autores.nome}</td>
-						<td>${autores.nacionalidade}</td>
-						<td><a href="/editarAutor/${autores.idautor}"
-							class="btn btn-primary ">Editar</a></td>
-						<td><a href="/removerAutor/${autores.idautor}"
-							class="btn btn-secondary ">Remover</a></td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
+		<div class="page-header text-center mb-5 fade-in">
+			<h1><i class="bi bi-person-fill me-3"></i>Autores</h1>
+			<p class="lead mb-0">Gerencie os autores do acervo</p>
+		</div>
+		<div class="main">
+			<div class="table-responsive">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th scope="col"><i class="bi bi-person me-2"></i>Nome do Autor</th>
+							<th scope="col"><i class="bi bi-globe me-2"></i>Nacionalidade</th>
+							<th scope="col" class="text-center"><i class="bi bi-gear me-2"></i>Ações</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${autores}" var="autores">
+							<tr class="fade-in">
+								<td><strong>${autores.nome}</strong></td>
+								<td>${autores.nacionalidade}</td>
+								<td class="text-center">
+									<div class="d-flex gap-2 justify-content-center">
+										<a href="/editarAutor/${autores.idautor}" class="btn btn-success btn-sm">
+											<i class="bi bi-pencil me-1"></i>Editar
+										</a>
+										<a href="/removerAutor/${autores.idautor}" class="btn btn-danger btn-sm">
+											<i class="bi bi-trash me-1"></i>Remover
+										</a>
+									</div>
+								</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
+		</div>
 	</div>
 	<jsp:include page="footer.jsp">
 	    <jsp:param name="footer" value=""/>

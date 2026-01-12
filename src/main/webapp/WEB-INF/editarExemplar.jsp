@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <jsp:include page="header.jsp">
@@ -39,7 +39,7 @@
 				<label for="nomeAutor" class="control-label">Nome do Livro</label> <input
 					type="text" class="form-control" id="titulo" name="titulo"
 					value="${exemplar.livro.titulo}" disabled> <label
-					for="disponivel" class="control-label">Disponível</label> <input
+					for="disponivel" class="control-label">DisponÃ­vel</label> <input
 					type="checkbox" class="form-control" id="disponivel"
 					name="disponivel"
 					${exemplar.disponivel== true? "checked":"unchecked"}>

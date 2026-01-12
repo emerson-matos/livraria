@@ -13,8 +13,3 @@ gradle-app.setting
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
 /.metadata/
-src/main/webapp/WEB-INF/editarLivro.jsp
-src/main/webapp/WEB-INF/autores.jsp
-src/main/webapp/WEB-INF/editarAutor.jsp
-bin/default/WEB-INF/inserirLivro.jsp
-bin/default/WEB-INF/inserirAutor.jsp

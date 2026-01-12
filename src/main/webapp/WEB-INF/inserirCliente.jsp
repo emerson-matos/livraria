@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
@@ -38,8 +38,8 @@
 				<input type="text" class="form-control" id="idade" name="idade" placeholder="Idade" required>
 			</div>
 			<div class="form-group">
-				<label for="cpf" class="control-label">Endereço</label>
-				<input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço" required>
+				<label for="cpf" class="control-label">EndereÃ§o</label>
+				<input type="text" class="form-control" id="endereco" name="endereco" placeholder="EndereÃ§o" required>
 			</div>
 			<div class="form-group">
 				<label for="cpf" class="control-label">Email</label>

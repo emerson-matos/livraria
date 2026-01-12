@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
@@ -27,19 +27,19 @@
 		<form action="/salvarLivro" method="post" modelAttribute="livro">
 			<div class="container">
 				<div class="form-group">
-					<label for="titulo" class="control-label">TÌtulo</label> <input
+					<label for="titulo" class="control-label">T√≠tulo</label> <input
 						class="form-control" type="text" name="titulo"
 						placeholder="Titulo do livro" required>
 				</div>
 				<div class="form-group">
-					<label for="edicao" class="control-label">Edicao</label> <input
+					<label for="edicao" class="control-label">Edi√ß√£o</label> <input
 						class="form-control" type="text" name="edicao"
-						placeholder="N˙mero da ediÁ„o" required>
+						placeholder="N√∫mero da edi√ß√£o" required>
 				</div>
 				<div class="form-group">
 					<label for="ano" class="control-label">Ano</label> <input
 						class="form-control" type="text" name="ano"
-						placeholder="Ano desta ediÁ„o" required>
+						placeholder="Ano desta edi√ß√£o" required>
 				</div>
 				<div class="form-group">
 					<label for="idioma" class="control-label">Idioma</label> <input
@@ -52,7 +52,7 @@
 						placeholder="ISBN do livro" required>
 				</div>
 				<div class="form-group">
-					<label for="srcImagemCapa" class="control-label">EndereÁo
+					<label for="srcImagemCapa" class="control-label">Endere√ßo
 						da Imagem</label> <input class="form-control" type="text"
 						name="srcImagemCapa" placeholder="Link da capa" required>
 				</div>

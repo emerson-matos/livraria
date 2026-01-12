@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
@@ -31,7 +31,7 @@
 			<thead>
 				<tr>
 					<th scope="col" style="display: none;">ID do Exemplar</th>
-					<th scope="col">Disponível</th>
+					<th scope="col">DisponÃ­vel</th>
 					<th scope="col">Nome do Livro</th>
 					<th scope="col">Nome do Autor</th>					
 					<th scope="col">Alugar</th>
@@ -43,7 +43,7 @@
 				<c:forEach items="${exemplares}" var="exemplares">
 					<tr>
 						<td style="display:none;">${exemplares.idexemplar}</td>
-						<td>${exemplares.disponivel == true? "Sim":"Não"}</td>
+						<td>${exemplares.disponivel == true? "Sim":"NÃ£o"}</td>
 						<td>${exemplares.livro.titulo}</td>
 						<td>${exemplares.livro.autor.nome}</td>
 						<td><a href="/alugarExemplar/${exemplares.idexemplar}"

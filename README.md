@@ -1,7 +1,20 @@
 # livraria
+
 projeto programacao-web ufabc 2018-2Q
 
 Sistema de gerenciamento de biblioteca desenvolvido com Spring Boot, JPA e PostgreSQL.
+
+## 🎨 Interface Moderna
+
+O projeto possui uma interface moderna e responsiva com:
+
+- **Design atualizado** com Bootstrap 5 e ícones Bootstrap Icons
+- **Gradientes e sombras** para um visual mais profissional
+- **Animações suaves** e transições
+- **Cards modernos** com efeitos hover
+- **Tabelas estilizadas** com cores gradientes
+- **Tipografia melhorada** com fonte Inter
+- **Totalmente responsivo** para todos os dispositivos
 
 ## 📋 Pré-requisitos
 
@@ -27,6 +40,7 @@ O projeto usa **Spring Boot Dev Services** que automaticamente inicia um **Postg
 - ✅ Container é parado automaticamente quando a aplicação é encerrada
 
 **Como funciona:**
+
 - O Spring Boot detecta o arquivo `docker-compose.yml` na raiz do projeto
 - Inicia automaticamente o container PostgreSQL quando você roda a aplicação
 - Configura a conexão JDBC automaticamente
@@ -39,11 +53,13 @@ O projeto usa **Spring Boot Dev Services** que automaticamente inicia um **Postg
 ### Opção 1: Usando Gradle Wrapper (Recomendado)
 
 No Linux/Mac:
+
 ```bash
 ./gradlew bootRun
 ```
 
 No Windows:
+
 ```bash
 gradlew.bat bootRun
 ```
@@ -51,6 +67,7 @@ gradlew.bat bootRun
 ### Opção 2: Compilar e Executar
 
 1. Compile o projeto:
+
    ```bash
    ./gradlew build
    ```
@@ -89,7 +106,8 @@ O projeto usa **Spring Boot Dev Services** que oferece:
 
 O projeto inclui um sistema de seed data que popula automaticamente o banco de dados com dados de exemplo na primeira execução.
 
-**Importante:** 
+**Importante:**
+
 - Os dados são criados apenas se o banco estiver vazio (verifica se já existem autores)
 - Com Spring Boot Dev Services: O container PostgreSQL é recriado a cada execução, então os dados serão populados novamente
 
@@ -129,10 +147,12 @@ O projeto inclui um sistema de seed data que popula automaticamente o banco de d
 ### Verificar Logs
 
 Durante a execução, você verá mensagens no console indicando:
+
 - Se o seed data foi executado ou pulado
 - Quantidade de registros criados em cada entidade
 
 Exemplo de saída:
+
 ```
 Seeding database with initial data...
 Seed data created successfully!
@@ -173,74 +193,75 @@ src/main/webapp/
 ## 🐛 Solução de Problemas
 
 ### Docker não está rodando
+
 - Verifique se o Docker está instalado: `docker --version`
 - Verifique se o Docker está rodando: `docker ps`
 - Inicie o Docker se necessário
 
 ### Erro ao iniciar container PostgreSQL
+
 - Verifique se a porta 5432 não está em uso: `lsof -i :5432` (Linux/Mac) ou `netstat -ano | findstr :5432` (Windows)
 - Se necessário, pare outros containers PostgreSQL: `docker ps` e `docker stop <container_id>`
 - O Spring Boot Dev Services gerencia isso automaticamente, mas conflitos podem ocorrer
 
 ### Erro de conexão com o banco de dados
+
 - Verifique se o Docker está rodando
 - O Spring Boot Dev Services gerencia tudo automaticamente
 - Se necessário, pare containers antigos: `docker ps` e `docker stop <container_id>`
 
 ### Problemas com Spring DevTools
+
 - Se o auto-restart não funcionar, verifique se está usando `developmentOnly`
 - Reinicie manualmente se necessário
 - Em Gradle, se usar `bootTestRun`, considere mudar para `testAndDevelopmentOnly` conforme [documentação](https://docs.spring.io/spring-boot/reference/features/dev-services.html)
 
 ### Porta 8080 já em uso
+
 - Altere a porta em `application.properties` adicionando: `server.port=8081`
 
 ### Erro ao compilar
+
 - Verifique se o Java 21 está instalado: `java -version`
 - Limpe e recompile: `./gradlew clean build`
 
 ---
 
-Página inicial
+## 📸 Screenshots
 
+Aqui estão as capturas de tela da interface modernizada:
 
-<a href="https://ibb.co/mFckY9"><img src="https://preview.ibb.co/jZJERU/index.png" alt="index" border="0"></a>
+### Página Inicial
 
+Interface principal com cards modernos exibindo os livros do acervo.
+![Página Inicial](screenshots/index.png)
 
-Página para exibir autores
+### Página de Livros
 
+Listagem completa de livros com ações de gerenciamento.
+![Página de Livros](screenshots/livros.png)
 
-<a href="https://ibb.co/fzdymU"><img src="https://preview.ibb.co/dR2PRU/autores.png" alt="autores" border="0"></a>
+### Página de Autores
 
+Tabela estilizada com informações dos autores e ações rápidas.
+![Página de Autores](screenshots/autores.png)
 
-Página para inserir autores
+### Páginas de Inserção e Edição
 
+Formulários modernos para cadastro e edição de entidades.
 
-<a href="https://ibb.co/cEi3Lp"><img src="https://preview.ibb.co/idnV0p/inserirautor.png" alt="inserirautor" border="0"></a>
+#### Inserir Livro
 
+![Inserir Livro](screenshots/inserirLivro.png)
 
-Página para edição de autores
+#### Editar Livro
 
+![Editar Livro](screenshots/editarLivro.png)
 
-<a href="https://ibb.co/cxNV0p"><img src="https://preview.ibb.co/kfLHfp/editaautor.png" alt="editaautor" border="0"></a>
+#### Inserir Autor
 
+![Inserir Autor](screenshots/inserirAutor.png)
 
-Página para inserir livros
+#### Editar Autor
 
-
-<a href="https://ibb.co/mt0TmU"><img src="https://preview.ibb.co/fUw16U/inserirlivros.png" alt="inserirlivros" border="0"></a>
-
-
-Página para exibição de livros
-
-
-<a href="https://ibb.co/jEKA0p"><img src="https://preview.ibb.co/ipRZRU/livros.png" alt="livros" border="0"></a>
-
-
-Página para edição de livros
-
-
-<a href="https://ibb.co/kJcr6U"><img src="https://preview.ibb.co/gBh2D9/editarlivro.png" alt="editarlivro" border="0"></a>
-
-
-
+![Editar Autor](screenshots/editarAutor.png)

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
@@ -38,7 +38,7 @@
 				</div>
 
 				<div class="form-group">
-					<label for="titulo" class="control-label">Título Original</label> <input
+					<label for="titulo" class="control-label">TÃ­tulo Original</label> <input
 						type="text" class="form-control" id="titulo" name="titulo"
 						value="${livro.titulo}" required>
 				</div>
@@ -51,7 +51,7 @@
 
 
 				<div class="form-group">
-					<label for="edicao" class="control-label">Edição</label> <input
+					<label for="edicao" class="control-label">EdiÃ§Ã£o</label> <input
 						type="text" class="form-control" id="edicao" name="edicao"
 						value="${livro.edicao}" required>
 				</div>
